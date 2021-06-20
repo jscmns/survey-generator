@@ -14,8 +14,8 @@ if (!sessionStorage.getItem('si') || !sessionStorage.getItem('no')) {
 
 const option1 = document.querySelector('.A');
 const option2 = document.querySelector('.B');
-const bocaBad = document.getElementById('boca-bad');
-const bocaGood = document.getElementById('boca-good');
+const no = document.getElementById('no');
+const yes = document.getElementById('yes');
 const userVoteMsg = document.querySelector('.has-user-voted');
 let hasUserVoted = false;
 
@@ -31,7 +31,7 @@ const displayCounts = () => {
   }
 }
 
-bocaBad.addEventListener('click', () => {
+no.addEventListener('click', () => {
   if (!hasUserVoted) {
     let currVotes = parseInt(sessionStorage.getItem('si'));
     currVotes++;
@@ -43,7 +43,7 @@ bocaBad.addEventListener('click', () => {
   displayCounts();
 });
 
-bocaGood.addEventListener('click', (e) => {
+yes.addEventListener('click', (e) => {
   if (!hasUserVoted) {
     let currVotes = parseInt(sessionStorage.getItem('no'));
     currVotes++;
