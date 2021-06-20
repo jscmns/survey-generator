@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+}
+
+.A, .B {
+  display: none;
+}
+
+.has-user-voted {
+  display: none;
+}
+
+.answer-container {
+  font-size: 5em;
+  border-color: black;
+  border-style: solid;
+  border-radius: .5em;
+}
